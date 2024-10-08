@@ -8,6 +8,9 @@ async function LoadTasks() {
   return tasks
 }
 
+// export const revalidate = 60
+export const dynamic = 'force-dynamic'
+
 async function HomePage() {
 
   const tasks = await LoadTasks()
