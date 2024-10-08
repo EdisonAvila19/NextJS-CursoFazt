@@ -1,0 +1,33 @@
+### Get all tasks
+GET http://localhost:3000/api/tasks
+
+### Create a new task
+POST http://localhost:3000/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Task 1",
+  "description": "Task 1 description"
+}
+
+### Get a task by id
+GET http://localhost:3000/api/tasks/2
+
+### Update a task by id
+PUT http://localhost:3000/api/tasks/2
+Content-Type: application/json
+
+{
+  "title": "Task 2 updated"
+}
+
+### Update a task by id
+PUT http://localhost:3000/api/tasks/2
+Content-Type: application/json
+
+{
+  "description": "Task 2 updated description"
+}
+
+### Delete a task by id
+DELETE http://localhost:3000/api/tasks/4
