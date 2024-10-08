@@ -1,9 +1,11 @@
 import TaskCard from '@/components/TaskCard'
+import { prisma } from '@/libs/prisma'
 
 async function LoadTasks() {
-  const resp = await fetch('http://localhost:3000/api/tasks')
-  const data = await resp.json()
-  return data.tasks
+  // const resp = await fetch('http://localhost:3000/api/tasks')
+  // const data = await resp.json()
+  const tasks = await prisma.task.findMany()
+  return tasks
 }
 
 async function HomePage() {
